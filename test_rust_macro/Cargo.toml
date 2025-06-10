@@ -1,0 +1,12 @@
+[package]
+name = "test_rust_macro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quote = "1"
+syn = { version = "2", features = ["full", "extra-traits"] }
+
+[lib]
+name = "test_rust_macro"
+proc-macro = true

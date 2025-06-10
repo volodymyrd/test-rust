@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "test_rust_macro",
+    "test_rust",
+]
+
+[workspace.dependencies]
+test_rust_macro = { path = "test_rust_macro" }
