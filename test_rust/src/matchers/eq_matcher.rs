@@ -84,4 +84,21 @@ mod tests {
     fn eq_matches_string_reference_with_string_reference() -> Result<()> {
         verify_that!("A string", eq("A string"))
     }
+
+    #[test]
+    fn eq_matches_owned_string_with_string_reference() -> Result<()> {
+        let value = "A string".to_string();
+        verify_that!(value, eq("A string"))
+    }
+
+    #[test]
+    fn eq_matches_owned_string_reference_with_string_reference() -> Result<()> {
+        let value = "A string".to_string();
+        verify_that!(&value, eq("A string"))
+    }
+
+    #[test]
+    fn eq_matches_i32_with_i32() -> Result<()> {
+        verify_that!(123, eq(123))
+    }
 }
